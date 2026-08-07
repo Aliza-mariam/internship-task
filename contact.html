@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Leeza's Portfolio</title>
+    <style>
+         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #eef1f5;
+            color: #333340;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #1e293b;
+            z-index: 1000;
+            padding: 15px 0; /* Reduced padding */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 1.8em; /* Slightly smaller */
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: none;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 25px; /* Adjusted */
+        }
+        nav ul li a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav ul li a:hover {
+            color: #8fbfa5;
+            transform: translateY(-2px);
+        }
+        .hero {
+            padding: 100px 20px 50px; /* Reduced padding */
+            background: linear-gradient(135deg, #ffffff 0%, #eef1ef 100%);
+            min-height: 70vh; /* Reduced height */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .hero-content {
+            flex: 1;
+            text-align: left;
+            padding-left: 50px;
+        }
+        .hero h1 {
+            font-size: 3.5em;
+            margin: 0;
+            color: #1a1a2e;
+            text-shadow: none;
+            animation: fadeInUp 1s ease-out;
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin: 20px 0;
+            animation: fadeInUp 1.2s ease-out;
+        }
+        .hero .slogan {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #6b6b7a;
+            animation: fadeInUp 1.3s ease-out;
+        }
+        .hero button, .hero a.button-link {
+            background: linear-gradient(135deg, #6b9080 0%, #9a7c9a 100%);
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px; /* Smaller padding */
+            font-size: 1em; /* Smaller font */
+            cursor: pointer;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1.6s ease-out;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+        }
+        .hero button:hover, .hero a.button-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(107, 144, 128, 0.5);
+        }
+        .hero img {
+            width: 250px;
+            height: 350px;
+            border-radius: 10px; /* Rectangle shape */
+            border: 3px solid #6b9080;
+            box-shadow: 0 0 30px rgba(107, 144, 128, 0.5);
+            margin-right: 30px;
+            animation: fadeInUp 1.4s ease-out;
+            flex-shrink: 0;
+        }
+        section {
+            padding: 40px 40px; /* Reduced top padding */
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+        section:not(.hero) {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+        #about {
+            background: #ffffff;
+        }
+        #skills {
+            background: #ffffff;
+        }
+        #contact {
+            background: #ffffff;
+        }
+        #contact h2 {
+            color: #1e293b;
+            text-shadow: none;
+        }
+        section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #1e293b;
+            text-shadow: none;
+            position: relative;
+        }
+        section h2::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(135deg, #6b9080 0%, #9a7c9a 100%);
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .about img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #6b9080;
+            margin-right: 50px;
+            box-shadow: 0 0 30px rgba(107, 144, 128, 0.5);
+        }
+        .about p {
+            font-size: 1.2em;
+            max-width: 600px;
+            line-height: 1.8;
+        }
+       /* EDUCATION SECTION */
+#education{
+    padding: 40px 40px;
+    background: #ffffff;
+    color: #1e293b;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 30px auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+#education h2{
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: #1e293b;
+    position: relative;
+}
+
+#education h2::after{
+    content: "";
+    width: 100px;
+    height: 4px;
+    background: #9a7c9a;
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+
+.education-table{
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.education-table th{
+    background: #6b9080;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.education-table td{
+    padding: 20px;
+    text-align: center;
+    color: #333340;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 17px;
+}
+
+.education-table tr{
+    background: #ffffff;
+    transition: 0.3s ease;
+}
+
+.education-table tr:hover{
+    background: #f2f5f3;
+    transform: scale(1.01);
+}
+
+.education-table tr:last-child td{
+    border-bottom: none;
+}
+
+.toggle-btn {
+    background: #1e293b;
+    color: #ffffff;
+    border: none;
+    padding: 10px 22px;
+    font-size: 0.95em;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.toggle-btn:hover {
+    background: #6b9080;
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+
+    #education{
+        padding: 60px 5%;
+    }
+
+    #education h2{
+        font-size: 35px;
+    }
+
+    .education-table{
+        font-size: 14px;
+    }
+
+    .education-table th,
+    .education-table td{
+        padding: 12px;
+    }
+}
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: -20px;
+        }
+        .skill {
+            background: #ffffff;
+            border: 1px solid #eaeaea;
+            padding: 20px;
+            /* Removed border-radius */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .skill:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(107, 144, 128, 0.2);
+        }
+        .skill p {
+            margin: 0 0 10px;
+            font-weight: bold;
+            color: #1a1a2e;
+        }
+        .skill-bar {
+            background-color: #eef1ef;
+            border-radius: 10px;
+            height: 25px;
+            overflow: hidden;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.08);
+        }
+        .skill-fill {
+            height: 100%;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #6b9080 0%, #9a7c9a 100%);
+            transition: width 1s ease-out;
+        }
+        .contact {
+            text-align: center;
+            background: transparent;
+            padding: 20px;
+            box-shadow: none;
+        }
+        .contact-intro {
+            color: #666;
+            font-size: 1.15em;
+            margin: -20px 0 40px;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+        .contact-card {
+            background: #ffffff;
+            border: 1px solid #e2e2e2;
+            border-radius: 14px;
+            padding: 30px 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+        }
+        .contact-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 35px rgba(107, 144, 128, 0.25);
+            border-color: #6b9080;
+        }
+        .contact-icon {
+            font-size: 2.2em;
+            display: block;
+            margin-bottom: 12px;
+        }
+        .contact-label {
+            font-size: 0.8em;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #6b9080;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .contact-value {
+            color: #1a1a2e;
+            font-size: 1.05em;
+            font-weight: 600;
+            word-break: break-word;
+        }
+        .contact-value a {
+            color: #1a1a2e;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact-value a:hover {
+            color: #6b9080;
+        }
+        .contact-note {
+            margin-top: 40px;
+            color: #888;
+            font-style: italic;
+        }
+        .contact-form {
+            max-width: 550px;
+            margin: 40px auto 0;
+            text-align: left;
+            background: #ffffff;
+            border: 1px solid #e2e2e2;
+            border-radius: 14px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        }
+        .form-heading {
+            text-align: center;
+            color: #1e293b;
+            margin: 0 0 25px;
+            font-size: 1.4em;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 6px;
+            font-size: 0.95em;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #d8d8d8;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: inherit;
+            color: #333340;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #6b9080;
+        }
+        .form-group input.invalid,
+        .form-group textarea.invalid {
+            border-color: #d64545;
+        }
+        .error-msg {
+            display: block;
+            color: #d64545;
+            font-size: 0.85em;
+            margin-top: 5px;
+            min-height: 16px;
+        }
+        .form-submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #6b9080 0%, #9a7c9a 100%);
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1em;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .form-submit-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px rgba(107, 144, 128, 0.35);
+        }
+        .form-success-msg {
+            display: none;
+            text-align: center;
+            color: #2e7d4f;
+            font-weight: 600;
+            margin: 15px 0 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px; /* Reduced padding */
+            background: #f2f2f2;
+            color: #666674;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav ul li a.active {
+            color: #8fbfa5;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">Leeza's Portfolio</div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="education.html">EDUCATION</a></li>
+                    <li><a href="skills.html">SKILLS</a></li>
+                    <li><a href="contact.html" class="active">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p class="contact-intro">Feel free to reach out — I'd love to hear from you.</p>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <span class="contact-icon">👤</span>
+                <div class="contact-label">Name</div>
+                <div class="contact-value">Aliza</div>
+            </div>
+            <div class="contact-card">
+                <span class="contact-icon">📞</span>
+                <div class="contact-label">Contact No</div>
+                <div class="contact-value">0336-3800263</div>
+            </div>
+            <div class="contact-card">
+                <span class="contact-icon">✉️</span>
+                <div class="contact-label">Gmail ID</div>
+                <div class="contact-value">aliza.khokhar4617@gmail.com</div>
+            </div>
+            <div class="contact-card">
+                <span class="contact-icon">🔗</span>
+                <div class="contact-label">LinkedIn</div>
+                <div class="contact-value"><a href="https://linkedin.com/in/aliza-mariam-b6210241a" target="_blank">Aliza Mariam</a></div>
+            </div>
+        </div>
+        <p class="contact-note">If you have any questions, feel free to ask me!</p>
+
+        <form id="contactForm" class="contact-form" novalidate>
+            <h3 class="form-heading">Send Me a Message</h3>
+
+            <div class="form-group">
+                <label for="cf-name">Name</label>
+                <input type="text" id="cf-name" name="name" placeholder="Your full name">
+                <span class="error-msg" id="err-name"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="cf-email">Email</label>
+                <input type="text" id="cf-email" name="email" placeholder="you@example.com">
+                <span class="error-msg" id="err-email"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="cf-message">Message</label>
+                <textarea id="cf-message" name="message" rows="5" placeholder="Write your message..."></textarea>
+                <span class="error-msg" id="err-message"></span>
+            </div>
+
+            <button type="submit" class="form-submit-btn">Submit</button>
+            <p class="form-success-msg" id="formSuccessMsg">✅ Message validated successfully!</p>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; Aliza_khokhar | aliza.khokhar4617@gmail.com</p>
+    </footer>
+
+
+    <script>
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                let isValid = true;
+
+                const nameInput = document.getElementById('cf-name');
+                const emailInput = document.getElementById('cf-email');
+                const messageInput = document.getElementById('cf-message');
+
+                const errName = document.getElementById('err-name');
+                const errEmail = document.getElementById('err-email');
+                const errMessage = document.getElementById('err-message');
+                const successMsg = document.getElementById('formSuccessMsg');
+
+                [nameInput, emailInput, messageInput].forEach(el => el.classList.remove('invalid'));
+                errName.textContent = '';
+                errEmail.textContent = '';
+                errMessage.textContent = '';
+                successMsg.style.display = 'none';
+
+                if (nameInput.value.trim() === '') {
+                    errName.textContent = 'Name is required.';
+                    nameInput.classList.add('invalid');
+                    isValid = false;
+                }
+
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (emailInput.value.trim() === '') {
+                    errEmail.textContent = 'Email is required.';
+                    emailInput.classList.add('invalid');
+                    isValid = false;
+                } else if (!emailPattern.test(emailInput.value.trim())) {
+                    errEmail.textContent = 'Please enter a valid email address.';
+                    emailInput.classList.add('invalid');
+                    isValid = false;
+                }
+
+                if (messageInput.value.trim() === '') {
+                    errMessage.textContent = 'Message is required.';
+                    messageInput.classList.add('invalid');
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    successMsg.style.display = 'block';
+                    contactForm.reset();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
