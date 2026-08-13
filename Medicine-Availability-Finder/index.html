@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Medicine Availability Finder</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">✚</span>
+                MedFinder
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="search.html">Find Medicine</a>
+                <a href="dashboard.html">Dashboard</a>
+            </nav>
+
+            <a href="search.html" class="nav-button">
+                Search Medicine
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+    <main>
+
+        <section class="hero">
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <span class="hero-tag">
+                        💊 Smart Medicine Search
+                    </span>
+
+                    <h1>
+                        Find Your Medicine
+                        <span>Quickly & Easily</span>
+                    </h1>
+
+                    <p>
+                        Search for medicines and discover pharmacies
+                        where they are currently available.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="search.html" class="primary-button">
+                            Find Medicine
+                        </a>
+
+                        <a href="#how-it-works" class="secondary-button">
+                            How It Works
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-card">
+
+                    <div class="medicine-icon">
+                        💊
+                    </div>
+
+                    <h3>Search Medicine</h3>
+
+                    <p>
+                        Check medicine availability from
+                        different pharmacies.
+                    </p>
+
+                    <div class="mini-search">
+
+                        <input
+                            type="text"
+                            placeholder="Enter medicine name..."
+                            id="heroSearch"
+                        >
+
+                        <button onclick="searchFromHome()">
+                            🔍
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <section class="features-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>WHY USE MEDFINDER?</span>
+
+                    <h2>
+                        Medicine search made simple
+                    </h2>
+
+                    <p>
+                        Find the information you need without
+                        visiting multiple pharmacies.
+                    </p>
+
+                </div>
+
+
+                <div class="features-grid">
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            🔎
+                        </div>
+
+                        <h3>Easy Search</h3>
+
+                        <p>
+                            Search for your required medicine
+                            quickly using our simple search system.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            🏪
+                        </div>
+
+                        <h3>Find Pharmacies</h3>
+
+                        <p>
+                            View pharmacies that have the
+                            searched medicine available.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            📦
+                        </div>
+
+                        <h3>Check Stock</h3>
+
+                        <p>
+                            Check whether a medicine is
+                            available or currently out of stock.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HOW IT WORKS ================= -->
+
+        <section class="how-section" id="how-it-works">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>HOW IT WORKS</span>
+
+                    <h2>
+                        Find your medicine in 3 simple steps
+                    </h2>
+
+                </div>
+
+
+                <div class="steps-grid">
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            01
+                        </div>
+
+                        <h3>Search</h3>
+
+                        <p>
+                            Enter the name of the medicine
+                            you are looking for.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            02
+                        </div>
+
+                        <h3>Check Availability</h3>
+
+                        <p>
+                            See pharmacies and available
+                            stock for your medicine.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            03
+                        </div>
+
+                        <h3>Choose Pharmacy</h3>
+
+                        <p>
+                            Select a pharmacy based on
+                            availability and location.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="cta-section">
+
+            <div class="container cta-content">
+
+                <div>
+
+                    <h2>
+                        Looking for a medicine?
+                    </h2>
+
+                    <p>
+                        Start searching and find available
+                        pharmacies near you.
+                    </p>
+
+                </div>
+
+                <a href="search.html" class="primary-button">
+                    Search Now →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">✚</span>
+                    MedFinder
+                </a>
+
+                <p>
+                    Making medicine availability
+                    easier to find.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Quick Links</h4>
+
+                <a href="index.html">Home</a>
+                <a href="search.html">Find Medicine</a>
+                <a href="dashboard.html">Dashboard</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Project</h4>
+
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Medicine Availability Finder.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
