@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Find Medicine | MedFinder</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="index.html"
+               class="logo">
+
+                <span class="logo-icon">
+                    ✚
+                </span>
+
+                MedFinder
+
+            </a>
+
+
+            <nav class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="search.html"
+                   class="active">
+
+                    Find Medicine
+
+                </a>
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+            </nav>
+
+
+            <a href="search.html"
+               class="nav-button">
+
+                Search Medicine
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="search-header">
+
+        <div class="container">
+
+            <span class="hero-tag">
+                💊 Medicine Finder
+            </span>
+
+
+            <h1>
+                Find Your Medicine
+            </h1>
+
+
+            <p>
+                Search for a medicine and check its
+                availability at pharmacies.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <section class="search-section">
+
+        <div class="container">
+
+
+            <div class="search-box">
+
+
+                <div class="search-input-wrapper">
+
+                    <span class="search-icon">
+                        🔍
+                    </span>
+
+
+                    <input
+                        type="text"
+                        id="medicineSearch"
+                        list="medicineList"
+                        placeholder="Type medicine name..."
+                    >
+
+
+                    <!-- DROPDOWN SUGGESTIONS -->
+
+                    <datalist id="medicineList">
+
+                        <option value="Panadol">
+                        <option value="Paracetamol">
+                        <option value="Brufen">
+                        <option value="Ibuprofen">
+                        <option value="Amoxicillin">
+                        <option value="Azithromycin">
+                        <option value="Cetirizine">
+                        <option value="Loratadine">
+                        <option value="Omeprazole">
+                        <option value="Vitamin C">
+                        <option value="Aspirin">
+                        <option value="Diclofenac">
+                        <option value="ORS">
+                        <option value="Metformin">
+                        <option value="Cough Syrup">
+
+                    </datalist>
+
+                </div>
+
+
+                <button
+                    id="searchButton"
+                    class="primary-button search-button">
+
+                    Search
+
+                </button>
+
+            </div>
+
+
+
+            <!-- FILTERS -->
+
+            <div class="filter-area">
+
+
+                <div class="filter-group">
+
+                    <label for="pharmacyFilter">
+                        Pharmacy
+                    </label>
+
+
+                    <select id="pharmacyFilter">
+
+                        <option value="all">
+                            All Pharmacies
+                        </option>
+
+                        <option value="City Care Pharmacy">
+                            City Care Pharmacy
+                        </option>
+
+                        <option value="Health Plus Pharmacy">
+                            Health Plus Pharmacy
+                        </option>
+
+                        <option value="MedCare Pharmacy">
+                            MedCare Pharmacy
+                        </option>
+
+                        <option value="New Life Pharmacy">
+                            New Life Pharmacy
+                        </option>
+
+                        <option value="Care Medical Store">
+                            Care Medical Store
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="filter-group">
+
+                    <label for="availabilityFilter">
+                        Availability
+                    </label>
+
+
+                    <select id="availabilityFilter">
+
+                        <option value="all">
+                            All
+                        </option>
+
+                        <option value="Available">
+                            Available
+                        </option>
+
+                        <option value="Out of Stock">
+                            Out of Stock
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= SEARCH MESSAGE ================= -->
+
+    <section class="container">
+
+        <div
+            id="searchMessage"
+            class="info-section"
+            style="display:none;">
+
+            <div class="info-content">
+
+                <div
+                    id="searchMessageIcon"
+                    class="info-icon">
+
+                    ℹ️
+
+                </div>
+
+
+                <div>
+
+                    <h3 id="searchMessageTitle">
+                        Search Medicine
+                    </h3>
+
+
+                    <p id="searchMessageText">
+                        Enter a medicine name above
+                        to check its availability.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= RESULTS ================= -->
+
+    <section class="results-section">
+
+        <div class="container">
+
+
+            <div class="results-header">
+
+                <div>
+
+                    <span class="section-label">
+                        SEARCH RESULTS
+                    </span>
+
+
+                    <h2>
+                        Medicine Availability
+                    </h2>
+
+                </div>
+
+
+                <p id="resultCount">
+                    Search for a medicine
+                </p>
+
+            </div>
+
+
+
+            <!-- RESULTS WILL APPEAR HERE -->
+
+            <div
+                class="medicine-grid"
+                id="medicineResults">
+
+            </div>
+
+
+
+            <!-- NO RESULT -->
+
+            <div
+                id="noResults"
+                class="no-results"
+                style="display:none;">
+
+                <div class="no-results-icon">
+                    🔍
+                </div>
+
+
+                <h3>
+                    Medicine Not Found
+                </h3>
+
+
+                <p>
+                    Sorry, this medicine is not available
+                    in our database.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+
+            <div class="footer-brand">
+
+                <a href="index.html"
+                   class="logo">
+
+                    <span class="logo-icon">
+                        ✚
+                    </span>
+
+                    MedFinder
+
+                </a>
+
+
+                <p>
+                    Making medicine availability
+                    easier to find.
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Quick Links
+                </h4>
+
+
+                <a href="index.html">
+                    Home
+                </a>
+
+
+                <a href="search.html">
+                    Find Medicine
+                </a>
+
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Project
+                </h4>
+
+
+                <a href="#">
+                    About
+                </a>
+
+
+                <a href="#">
+                    Contact
+                </a>
+
+
+                <a href="#">
+                    Privacy
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Medicine Availability Finder.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
