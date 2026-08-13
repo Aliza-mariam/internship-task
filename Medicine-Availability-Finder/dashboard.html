@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | MedFinder</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">✚</span>
+                MedFinder
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="search.html">Find Medicine</a>
+                <a href="dashboard.html" class="active">Dashboard</a>
+            </nav>
+
+            <a href="search.html" class="nav-button">
+                Search Medicine
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <main>
+
+        <!-- Dashboard Header -->
+
+        <section class="dashboard-header">
+
+            <div class="container dashboard-header-content">
+
+                <div>
+
+                    <span class="hero-tag">
+                        📊 Medicine Finder
+                    </span>
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                    <p>
+                        Overview of medicines, pharmacies,
+                        and availability information.
+                    </p>
+
+                </div>
+
+                <a href="search.html" class="primary-button">
+                    + Find Medicine
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section class="dashboard-section">
+
+            <div class="container">
+
+                <div class="stats-grid">
+
+                    <!-- Total Medicines -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            💊
+                        </div>
+
+                        <div class="stat-content">
+
+                            <p>
+                                Total Medicines
+                            </p>
+
+                            <h2 id="totalMedicines">
+                                125
+                            </h2>
+
+                            <span class="stat-positive">
+                                ↑ 8% this month
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Available Medicines -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            📦
+                        </div>
+
+                        <div class="stat-content">
+
+                            <p>
+                                Available Medicines
+                            </p>
+
+                            <h2 id="availableMedicines">
+                                98
+                            </h2>
+
+                            <span class="stat-positive">
+                                Currently available
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Pharmacies -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            🏪
+                        </div>
+
+                        <div class="stat-content">
+
+                            <p>
+                                Registered Pharmacies
+                            </p>
+
+                            <h2 id="totalPharmacies">
+                                24
+                            </h2>
+
+                            <span class="stat-positive">
+                                Active pharmacies
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Searches -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            🔎
+                        </div>
+
+                        <div class="stat-content">
+
+                            <p>
+                                Total Searches
+                            </p>
+
+                            <h2 id="totalSearches">
+                                342
+                            </h2>
+
+                            <span class="stat-positive">
+                                ↑ 12% this month
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= DASHBOARD CONTENT ================= -->
+
+                <div class="dashboard-grid">
+
+
+                    <!-- Recent Searches -->
+
+                    <div class="dashboard-card large-card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <span class="section-label">
+                                    RECENT ACTIVITY
+                                </span>
+
+                                <h2>
+                                    Recent Medicine Searches
+                                </h2>
+
+                            </div>
+
+                            <a href="search.html" class="view-link">
+                                View All →
+                            </a>
+
+                        </div>
+
+
+                        <div class="table-container">
+
+                            <table>
+
+                                <thead>
+
+                                    <tr>
+                                        <th>Medicine</th>
+                                        <th>Pharmacy</th>
+                                        <th>Stock</th>
+                                        <th>Status</th>
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+
+                                        <td>
+                                            <strong>
+                                                Paracetamol
+                                            </strong>
+                                        </td>
+
+                                        <td>
+                                            City Care Pharmacy
+                                        </td>
+
+                                        <td>
+                                            45
+                                        </td>
+
+                                        <td>
+                                            <span class="table-status available">
+                                                Available
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>
+                                            <strong>
+                                                Ibuprofen
+                                            </strong>
+                                        </td>
+
+                                        <td>
+                                            Health Plus Pharmacy
+                                        </td>
+
+                                        <td>
+                                            28
+                                        </td>
+
+                                        <td>
+                                            <span class="table-status available">
+                                                Available
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>
+                                            <strong>
+                                                Amoxicillin
+                                            </strong>
+                                        </td>
+
+                                        <td>
+                                            MedCare Pharmacy
+                                        </td>
+
+                                        <td>
+                                            0
+                                        </td>
+
+                                        <td>
+                                            <span class="table-status out">
+                                                Out of Stock
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>
+                                            <strong>
+                                                Vitamin C
+                                            </strong>
+                                        </td>
+
+                                        <td>
+                                            New Life Pharmacy
+                                        </td>
+
+                                        <td>
+                                            20
+                                        </td>
+
+                                        <td>
+                                            <span class="table-status available">
+                                                Available
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Quick Actions -->
+
+                    <div class="dashboard-card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <span class="section-label">
+                                    QUICK ACTIONS
+                                </span>
+
+                                <h2>
+                                    Get Started
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="quick-actions">
+
+                            <a
+                                href="search.html"
+                                class="quick-action"
+                            >
+
+                                <span>
+                                    🔎
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Search Medicine
+                                    </strong>
+
+                                    <small>
+                                        Find available medicines
+                                    </small>
+
+                                </div>
+
+                            </a>
+
+
+                            <a
+                                href="search.html"
+                                class="quick-action"
+                            >
+
+                                <span>
+                                    🏪
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Find Pharmacy
+                                    </strong>
+
+                                    <small>
+                                        View pharmacy availability
+                                    </small>
+
+                                </div>
+
+                            </a>
+
+
+                            <a
+                                href="search.html"
+                                class="quick-action"
+                            >
+
+                                <span>
+                                    📦
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Check Stock
+                                    </strong>
+
+                                    <small>
+                                        View current medicine stock
+                                    </small>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= PHARMACY SECTION ================= -->
+
+                <div class="dashboard-card pharmacy-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                PHARMACIES
+                            </span>
+
+                            <h2>
+                                Pharmacy Availability
+                            </h2>
+
+                        </div>
+
+                        <a href="search.html" class="view-link">
+                            Find More →
+                        </a>
+
+                    </div>
+
+
+                    <div class="pharmacy-grid">
+
+
+                        <!-- Pharmacy 1 -->
+
+                        <div class="pharmacy-item">
+
+                            <div class="pharmacy-icon">
+                                🏪
+                            </div>
+
+                            <div class="pharmacy-details">
+
+                                <h3>
+                                    City Care Pharmacy
+                                </h3>
+
+                                <p>
+                                    📍 Main Market
+                                </p>
+
+                                <span class="pharmacy-status">
+                                    ● Open
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Pharmacy 2 -->
+
+                        <div class="pharmacy-item">
+
+                            <div class="pharmacy-icon">
+                                🏪
+                            </div>
+
+                            <div class="pharmacy-details">
+
+                                <h3>
+                                    Health Plus Pharmacy
+                                </h3>
+
+                                <p>
+                                    📍 Station Road
+                                </p>
+
+                                <span class="pharmacy-status">
+                                    ● Open
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Pharmacy 3 -->
+
+                        <div class="pharmacy-item">
+
+                            <div class="pharmacy-icon">
+                                🏪
+                            </div>
+
+                            <div class="pharmacy-details">
+
+                                <h3>
+                                    Care Medical Store
+                                </h3>
+
+                                <p>
+                                    📍 City Center
+                                </p>
+
+                                <span class="pharmacy-status">
+                                    ● Open
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Pharmacy 4 -->
+
+                        <div class="pharmacy-item">
+
+                            <div class="pharmacy-icon">
+                                🏪
+                            </div>
+
+                            <div class="pharmacy-details">
+
+                                <h3>
+                                    New Life Pharmacy
+                                </h3>
+
+                                <p>
+                                    📍 Green Avenue
+                                </p>
+
+                                <span class="pharmacy-status">
+                                    ● Open
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= INFO BOX ================= -->
+
+                <div class="info-section dashboard-info">
+
+                    <div class="info-content">
+
+                        <div class="info-icon">
+                            ℹ️
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Dashboard Information
+                            </h3>
+
+                            <p>
+                                This dashboard currently displays
+                                sample data for the Task 10 core build.
+                                Data persistence will be added in the
+                                next project task.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">✚</span>
+                    MedFinder
+                </a>
+
+                <p>
+                    Making medicine availability
+                    easier to find.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Quick Links</h4>
+
+                <a href="index.html">Home</a>
+                <a href="search.html">Find Medicine</a>
+                <a href="dashboard.html">Dashboard</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Project</h4>
+
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Medicine Availability Finder.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
